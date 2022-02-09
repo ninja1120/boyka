@@ -30,7 +30,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "أضفني إلى مجموعتك ︙🙈"",
+                        "أضفني إلى مجموعتك ︙🙈",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
