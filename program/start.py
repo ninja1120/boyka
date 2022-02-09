@@ -57,38 +57,37 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **مرحبا {message.from_user.mention()} اهلا بك في ڤان ميوزك**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **يتيح لك تشغيل الموسيقى في مجموعات من خلال الدردشات الصوتية الجديدة في Telegram!**
+        f"""✨ **Welcome {message.from_user.mention()} !**\n
+💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Allows you to play music and video on groups through the Telegram Group video chat!**
 
-🔮  **كتشف جميع أوامر الروبوت وكيفية عملها من خلال النقر على زر »📚 الأوامر!**
+💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
 
-[« 𝗦𝗣𝗢𝗡𝗦𝗢𝗥𝗘𝗗 𝗕𝗬 𝗩𝗔𝗡  🙈 »](https://t.me/UU_VAN)
-
-** لمعرفة كيفية استخدام هذا الروبوت ، يرجى النقر فوق » دليل الاستخدام 💻**""",
+🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "أضفني إلى مجموعتك ︙🙈",
+                        "➕ Add me to your Group ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("دليل الاستخدام ︙💻", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("الأوامر ︙📚", callback_data="cbcmds"),
-                    InlineKeyboardButton("︙ʙᴏʏᴋᴀ︙", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
+                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "جروب الدعم︙☁️", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "قناة السورس ︙💕", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "︙ɴɪɴᴊᴀ︙", url="https://t.me/dont_run"
+                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
                     )
                 ],
             ]
