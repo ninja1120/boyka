@@ -35,7 +35,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["skip", "تخطي", f"skip@{BOT_USERNAME}", "vskip", "تخطي الفيديو"]) & other_filters)
+@Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
 @authorized_users_only
 async def skip(c: Client, m: Message):
     await m.delete()
@@ -83,7 +83,7 @@ async def skip(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", "وقف", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
     & other_filters
 )
 @authorized_users_only
